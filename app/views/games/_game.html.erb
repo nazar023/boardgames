@@ -1,0 +1,18 @@
+<div id="<%= dom_id game %>">
+
+  <div class="card mb-3" style="width: 18rem;">
+    <%= image_tag 'gameofthrones', width: "250", height: "250", class:"card-img-top"%>
+  <div class="card-body">
+    <h5 class="card-title text-center">
+      <%=  game.name %>
+    </h5>
+    <p class="card-text">
+      <%= game.describtion %>
+    </p>
+
+    <a> <%= link_to "Show this game", game, class:"btn btn-dark btn-sm" %> </a>
+  </div>
+</div>
+
+
+</div>

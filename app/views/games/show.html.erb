@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @game %>
+
+<% if @game.members >= @game.participants.length %>
+  <h2> Join! </h2>
+  <%= render "participants/form", participant: @participant%>
+<%else %>
+  Event is full, yay!
+<% end %>
+<br/>
+<br/>
+
+Already in:
+
+<% @game.participants.length.times do |i| %>
+  <div> <%= @game.participants[i].name %> </div>
+<% end %>
+
+<div>
+  <br/><br/>
+  <%= link_to "Edit this game", edit_game_path(@game) %> |
+  <%= link_to "Back to games", games_path %>
+  <%= button_to "Destroy this game", @game, method: :delete %>
+</div>
