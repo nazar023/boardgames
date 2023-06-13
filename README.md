@@ -1,5 +1,7 @@
 # README
 
+Practicing my Rails skills, creating site for boardgame club.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
